@@ -6,8 +6,6 @@
 #include <string>
 #include <vector>
 #include <cmath>
-#include <map>
-#include <fstream>
 
 class Point
 {
