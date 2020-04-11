@@ -1,7 +1,7 @@
 #include "g2use.h"
 
 std::string getPath()
-//Функція повертає шлях до файлу, введений користувачем
+//Input file path
 {
 	std::string path;
 	std::cout << "\nPlease, input file path: ";
@@ -36,7 +36,7 @@ void processData(std::ifstream& fi, std::ofstream& fo)
 }
 
 std::vector<Point> inData(std::ifstream& fi)
-//Функція створює об'єкт - точку
+//Input 4 points from file
 {
 	std::vector<Point> in_data(4);
 	double x(0), y(0);
@@ -50,7 +50,7 @@ std::vector<Point> inData(std::ifstream& fi)
 }
 
 void outData(std::vector<Point>& data, bool result, std::ofstream& fo)
-//Функція виводить результати роботи програми у файл
+//Output result to file
 {
 	fo << "\n";
 	for (auto& p : data)
@@ -64,7 +64,7 @@ void outData(std::vector<Point>& data, bool result, std::ofstream& fo)
 }
 
 double getC(std::ifstream& fi)
-//Функція зчитує дані типу string з файлу і повертає double
+//Convert string data to double coordinate
 {
 	char a;
 	std::string tempX_int, tempX;
@@ -94,7 +94,7 @@ double getC(std::ifstream& fi)
 }
 
 bool isDeltoid(std::vector<Point>& d)
-//Функція перевіряє чи є заданий чотирикутник дельтоїдом
+//Check whether a circuit is a deltoid
 {
 	std::vector<double> len;
 	for (int i = 0; i < 3; ++i)
